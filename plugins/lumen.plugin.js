@@ -212,9 +212,17 @@
   html.lumen [class*="continue-watching-row-"] [class*="progress-bar-layer-"] { z-index: 3 !important; }
   html.lumen [class*="continue-watching-row-"] [class*="dismiss-icon-layer-"] { z-index: 4 !important; }
   html.lumen .lm-cw-art {
-    position: absolute; inset: 0; z-index: 1; background-size: cover; background-position: center 25%; background-color: #222;
+    position: absolute; inset: 0; z-index: 1; background-size: cover; background-position: center 25%; background-color: #222; 
     transition: opacity 0.4s ease;
   }
+  /* Portrait poster fallback */
+html.lumen .lm-cw-art.lm-poster {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-color: #222 !important;
+  filter: saturate(1.05);
+}
   html.lumen .lm-cw-art::after {
     content: ""; position: absolute; inset: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.12) 45%, rgba(0, 0, 0, 0) 70%);
