@@ -17,7 +17,7 @@
     heroSlides: 6, // how many titles the billboard rotates through
     heroInterval: 9000, // ms per slide
     continueWatchingBackdrops: true, // landscape art for Continue Watching
-    rankNumbers: true, // big numbers on "Top ..." rows
+    rankNumbers: false, // big numbers on "Top ..." rows
     homeLabel: "Home", // sidebar label for Stremio's "Board"
   };
 
