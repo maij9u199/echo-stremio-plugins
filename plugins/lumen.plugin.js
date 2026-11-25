@@ -17,7 +17,7 @@
     heroSlides: 6, // how many titles the billboard rotates through
     heroInterval: 9000, // ms per slide
     continueWatchingBackdrops: true, // landscape art for Continue Watching
-    rankNumbers: true, // big numbers on "Top ..." rows
+    rankNumbers: false, // big numbers on "Top ..." rows
     homeLabel: "Home", // sidebar label for Stremio's "Board"
   };
 
@@ -193,7 +193,13 @@
     font-size: 0.86rem !important; font-weight: 500 !important; color: var(--lm-text-2) !important; text-align: left !important;
   }
   html.lumen a[class*="meta-item-link-"]:hover [class*="title-label-"] { color: var(--lm-text) !important; }
-
+/* Show 6 posters per catalogue row */
+html.lumen [class*="board-content-"]:not([class*="board-content-container"]) [class*="meta-row"]:not([class*="continue-watching-row-"]) > [class*="meta-items-container-"] > *,
+html.lumen [class*="search-content"] [class*="meta-row"] > [class*="meta-items-container-"] > * {
+  flex: 0 0 calc(100% / 6) !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
   /* Continue watching: wide landscape cards */
   html.lumen [class*="continue-watching-row-"] [class*="meta-items-container-"] {
     display: flex !important; flex-wrap: nowrap !important; gap: 1.1rem !important; overflow-x: auto !important; overflow-y: visible !important;
